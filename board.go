@@ -13,7 +13,8 @@ type cell interface {
 }
 
 type board interface {
-	Owner() *player
+	cell
+	SelectCell(x int, y int, p *player) *cell
 }
 
 type singlecell struct {
